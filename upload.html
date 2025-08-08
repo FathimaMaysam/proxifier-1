@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Upload Attendance</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Create Account - Step 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
-  <h2>Upload Attendance Audio</h2>
-  <form id="uploadForm">
-    <label>Upload Roll Number Audio</label>
-    <input type="file" accept="audio/*" id="rollAudio" required><br><br>
+<body class="create-page">
+    <div class="form-box">
+        <h2>Complete Your Profile</h2>
+        <form id="createFormStep2">
+            <label for="fullName">Full Name</label><br>
+            <input type="text" id="fullName" placeholder="Enter your full name" required><br><br>
 
-    <label>Upload Name Audio</label>
-    <input type="file" accept="audio/*" id="nameAudio" required><br><br>
+            <label for="rollNo">Roll Number</label><br>
+            <input type="text" id="rollNo" placeholder="Enter your roll number" required><br><br>
 
-    <label>Upload "Present Miss" Audio</label>
-    <input type="file" accept="audio/*" id="presentAudio" required><br><br>
+            <label for="audioFile">Upload "Present" Audio</label><br>
+            <input type="file" accept="audio/*" id="audioFile" required><br><br>
 
-    <button type="submit" class="btn">Save Attendance</button>
-  </form>
-  <a href="index.html" class="arrow">⬅ Back to Home</a>
+            <button type="submit" class="btn">Create Account</button>
+        </form>
+        <div id="upload-status"></div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="client.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

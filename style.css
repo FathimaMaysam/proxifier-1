@@ -1,112 +1,178 @@
+/* General Body & Background Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-image: url("indexb.png");
-  background-size: contain; /* ← changed from cover to contain */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #f0f0f0; /* fallback color */
-  color: #333;
-  padding: 20px;
-  min-height: 100vh;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f0f0f0; /* Fallback color */
 }
 
-body.login-page {
-  background-image: url("loginb.png"); /* or your correct path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #000000; /* fallback color if image fails */
+/* Index Page Specific Styles */
+body.index-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('createb3.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Login, Create, and Upload Page Styles */
+body.login-page, body.create-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('createb3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Dashboard Page Specific Styles */
+body.dashboard-page {
+    background-color: #f4f4f4;
 }
 
 
-
+/* Reusable Components */
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 h1 {
-  font-size: 3rem;
-  margin-bottom: 2rem;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f1f1f1;
 }
 
-form input {
-  padding: 10px;
-  margin: 10px;
-  width: 80%;
-  max-width: 300px;
+.form-box {
+    background-color: rgb(47 56 53 / 36%);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(127, 110, 110, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+.form-box label {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+.form-box a {
+    color: #7ec4cf;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+    padding: 12px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+form input[type="file"] {
+    margin-top: 10px;
+    color: white;
 }
 
 .btn {
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #7ec4cf;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #34a5b796;;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.arrow {
-  display: block;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #555;
+.btn:hover {
+    background-color: #65b2bd;
 }
 
+/* Dashboard Table */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 30px;
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 th, td {
-  padding: 12px;
-  border: 1px solid #ccc;
-  text-align: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
 }
 
+th {
+    background-color: #7ec4cf;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Logout Button */
 .logout-container {
-  text-align: right;
-  padding: 20px;
+    text-align: right;
+    padding: 20px;
 }
 
-.logout-btn {
-  background-color: #ff5555;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+#logout-button {
+    background-color: #ff5555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.logout-btn:hover {
-  background-color: #ff0000;
+#logout-button:hover {
+    background-color: #e60000;
 }
 
-.blue-btn {
-  background-color: #7ec4cf; /* Bootstrap Blue */
-  color: white;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
+/* Upload status message */
+#upload-status {
+    margin-top: 15px;
+    color: #ffffff;
+    font-weight: bold;
 }
+.index-box {
+    background-color: rgb(47 56 53 / 36%);
 
-.blue-btn:hover {
-  background-color: #7ec4cf;
+    padding: 50px 60px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(127, 110, 110, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
 }
-
-
-

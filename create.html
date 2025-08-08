@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Create Account</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Create Account - Step 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
-  <h2>Create Account</h2>
-  <form id="createForm">
-    <input type="text" id="username" placeholder="Username" required><br>
-    <input type="password" id="password" placeholder="Password" required><br>
-    <button type="submit" class="btn">Create</button>
-  </form>
-  <a href="index.html" class="arrow">⬅ Back to Home</a>
+<body class="center create-page">
+    <div class="form-box">
+        <h2>Create Account</h2>
+        <form id="createFormStep1">
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit" class="btn">Continue</button>
+        </form>
+        <br>
+        <a href="login.html">Already have an account? Login</a>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="client.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
