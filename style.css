@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("indexb.png");
+  background-size: contain; /* ← changed from cover to contain */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f0f0f0; /* fallback color */
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body.login-page {
+  background-image: url("loginb.png"); /* or your correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #000000; /* fallback color if image fails */
+}
+
+
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #7ec4cf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.arrow {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.logout-container {
+  text-align: right;
+  padding: 20px;
+}
+
+.logout-btn {
+  background-color: #ff5555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #ff0000;
+}
+
+.blue-btn {
+  background-color: #7ec4cf; /* Bootstrap Blue */
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blue-btn:hover {
+  background-color: #7ec4cf;
+}
+
+
+
